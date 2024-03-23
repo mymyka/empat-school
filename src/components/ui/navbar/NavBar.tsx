@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const NavBar = () => {
   return (
-    <div className=" flex justify-between">
+    <nav className=" flex justify-between">
       <div>
         <Image
           src={"/assets/img/logo.png"}
@@ -39,6 +39,6 @@ export const NavBar = () => {
       <div className="lg:hidden">
         <Image src={burgerMenu} alt="imag" />
       </div>
-    </div>
+    </nav>
   );
 };
