@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/ui/navbar";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/components/ui/footer";
+import { IconContext } from "react-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "px-8 py-8")}>
+      <body className={inter.className}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

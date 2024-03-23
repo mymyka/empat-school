@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const NavBar = () => {
   return (
-    <nav className=" flex justify-between">
+    <nav className=" px-8 py-8 flex justify-between">
       <div>
         <Image
           src={"/assets/img/logo.png"}
