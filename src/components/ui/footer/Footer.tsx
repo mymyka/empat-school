@@ -7,7 +7,7 @@ import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
 export const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col lg:flex-row lg:justify-center">
+      <footer className="flex flex-col lg:flex-row lg:justify-center pt-20">
         <div className="">
           <div className="flex justify-center">
             <Image
