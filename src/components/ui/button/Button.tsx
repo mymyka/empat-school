@@ -8,8 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       intent: {
-        primary: "bg-primary-200",
-        secondary: "bg-primary-50",
+        primary: "bg-primary-500 text-nutural-50",
+        secondary: " bg-primary-100 text-primary-400",
         link: "bg-transparent underline-offset-4 hover:underline",
         outlined: "bg-transparent border border-nutural-400",
       },

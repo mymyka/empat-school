@@ -53,7 +53,7 @@ const HomePage = () => {
         </section>
         <section className="flex flex-col items-center">
           <Card>
-            <p>
+            <p className=" w-96">
               This your favorite: videos, films, articles, books, and evrithing else that you wnat
               to learn language from !
             </p>
@@ -67,8 +67,8 @@ const HomePage = () => {
             quality={100}
           />
           <Card>
-            <h3>We find new vocabulary for you and</h3>
-            <p>
+            <h3 className=" w-96">We find new vocabulary for you and</h3>
+            <p className=" w-96">
               make collections, we put them with context in the boxes to save emotions from content
             </p>
           </Card>
@@ -77,7 +77,9 @@ const HomePage = () => {
           <h2>We make games and lessons for you</h2>
           <div className="pt-5">
             <Card>
-              <p>Anki cards, quizzes, competitive games against other users and more...</p>
+              <p className=" w-96">
+                Anki cards, quizzes, competitive games against other users and more...
+              </p>
             </Card>
           </div>
           <Image
@@ -101,7 +103,7 @@ const HomePage = () => {
           <h2>Don’t waste time start right now !</h2>
           <div className="pt-5">
             <Card>
-              <p>
+              <p className=" w-96">
                 Sign in or try a demo, ti start right now, and then create an account with saved
                 progress !
               </p>

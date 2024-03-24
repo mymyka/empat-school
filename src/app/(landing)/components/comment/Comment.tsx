@@ -20,7 +20,7 @@ export const Comment: React.FC<CommentInfo> = ({ text, avatarUrl, name, nickname
               className="  rounded-full"
               alt={"LOlA"}
               quality={100}
-              width={100}
+              width={80}
               height={150}
             />
             <div className="flex flex-col">
@@ -29,7 +29,7 @@ export const Comment: React.FC<CommentInfo> = ({ text, avatarUrl, name, nickname
             </div>
           </div>
           <div className="pt-2">
-            <p>{text}</p>
+            <p className=" w-96">{text}</p>
           </div>
         </div>
       </Card>
