@@ -12,6 +12,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        title: ["Madimi One"],
+      },
       colors: {
         primary: {
           "50": "#fef1f8",
@@ -51,6 +54,19 @@ const config: Config = {
           "800": "#645448",
           "900": "#52463c",
           "950": "#2b241f",
+        },
+        yellow: {
+          "50": "#fefce8",
+          "100": "#fff9c2",
+          "200": "#ffef89",
+          "300": "#ffe156",
+          "400": "#fdca12",
+          "500": "#ecb006",
+          "600": "#cc8702",
+          "700": "#a35f05",
+          "800": "#864b0d",
+          "900": "#723d11",
+          "950": "#431f05",
         },
       },
     },

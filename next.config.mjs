@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["www.merchandisingplaza.ca"],
+    domains: ["www.merchandisingplaza.ca", "i.pinimg.com"],
   },
 };
 

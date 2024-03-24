@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/ui/navbar";
-import { cn } from "@/lib/utils";
 import { Footer } from "@/components/ui/footer";
-import { IconContext } from "react-icons";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Lato({ weight: "400", style: "normal", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
