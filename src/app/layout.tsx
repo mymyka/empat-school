@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/ui/navbar";
 import { Footer } from "@/components/ui/footer";
+import { cn } from "@/lib/utils";
 
 const inter = Lato({ weight: "400", style: "normal", subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className, "bg-background-50")}>
         <NavBar />
         {children}
         <Footer />
