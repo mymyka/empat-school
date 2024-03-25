@@ -15,6 +15,8 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false, // this will hide Drawer hamburger icon
+      actions: <Widget>[Container()],
       surfaceTintColor: Colors.transparent,
       toolbarHeight: 50,
       flexibleSpace: Container(

@@ -1,3 +1,4 @@
+import 'package:empat/app/widgets/custom_drawer.dart';
 import 'package:empat/app/widgets/navbar.dart';
 import 'package:empat/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +45,12 @@ class _AppState extends State<App> {
     return MaterialApp(
       home: Scaffold(
         appBar: const Navbar(),
+        drawer: CustomDrawer(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.white,
+          child: const Icon(Icons.add),
+        ),
         body: SafeArea(
           child: Center(
             child: _widgetOptions.elementAt(_selectedIndex),

@@ -20,7 +20,11 @@ class HomeScreen extends StatelessWidget {
       children: [
         BadgeBar(
           badges: [
-            TouchableBadge.create(child: const Icon(Icons.explore)),
+            TouchableBadge.create(
+                child: const Icon(Icons.explore),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                }),
             TouchableBadge.active(
               child: const Text(
                 "All",

@@ -3,13 +3,14 @@ import 'package:gradient_borders/gradient_borders.dart';
 
 class TouchableBadge extends StatelessWidget {
   final Widget child;
+  final void Function()? onPressed;
 
-  const TouchableBadge({super.key, required this.child});
+  const TouchableBadge({super.key, required this.child, this.onPressed});
 
-  TouchableBadge.active({
-    Key? key,
-    required Widget child,
-  }) : this(
+  TouchableBadge.active(
+      {Key? key, required Widget child, void Function()? onPressed})
+      : this(
+          onPressed: onPressed,
           key: key,
           child: Container(
             padding: const EdgeInsets.all(10),
@@ -24,7 +25,9 @@ class TouchableBadge extends StatelessWidget {
   TouchableBadge.featured({
     Key? key,
     required Widget child,
+    void Function()? onPressed,
   }) : this(
+          onPressed: onPressed,
           key: key,
           child: Container(
             padding: const EdgeInsets.all(10),
@@ -53,7 +56,9 @@ class TouchableBadge extends StatelessWidget {
   TouchableBadge.create({
     Key? key,
     required Widget child,
+    void Function()? onPressed,
   }) : this(
+          onPressed: onPressed,
           key: key,
           child: Container(
             padding: const EdgeInsets.all(10),
@@ -66,5 +71,8 @@ class TouchableBadge extends StatelessWidget {
         );
 
   @override
-  Widget build(BuildContext context) => child;
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: onPressed,
+        child: child,
+      );
 }
