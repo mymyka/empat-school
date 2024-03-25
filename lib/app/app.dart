@@ -10,7 +10,7 @@ class App extends StatefulWidget {
   State<App> createState() => _AppState();
 }
 
-class _AppState extends State<App> {
+class _AppState extends State<App> with SingleTickerProviderStateMixin {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -33,11 +33,24 @@ class _AppState extends State<App> {
       style: optionStyle,
     ),
   ];
+  late final TabController _tabController;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      _tabController.animateTo(index);
     });
+  }
+
+  @override
+  void initState() {
+    _tabController = TabController(length: _widgetOptions.length, vsync: this);
+    _tabController.addListener(() {
+      setState(() {
+        _selectedIndex = _tabController.index;
+      });
+    });
+    super.initState();
   }
 
   @override
@@ -52,8 +65,9 @@ class _AppState extends State<App> {
           child: const Icon(Icons.add),
         ),
         body: SafeArea(
-          child: Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
+          child: TabBarView(
+            controller: _tabController,
+            children: _widgetOptions,
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
