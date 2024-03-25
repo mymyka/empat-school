@@ -25,6 +25,7 @@ class RecommendationService {
     return List.generate(
       10,
       (index) => UserVideo(
+        index: index,
         chanel: UserChanel(
           name: faker.person.name(),
           avatarUrl: faker.image.image(),

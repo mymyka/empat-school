@@ -3,6 +3,7 @@ import 'package:empat/shared/widgets/badge_bar.dart';
 import 'package:empat/shared/widgets/flexible_list_view.dart';
 import 'package:empat/shared/widgets/touchable_badge.dart';
 import 'package:empat/shared/widgets/user_video_card.dart';
+import 'package:empat/watch/screens/watch_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,7 +51,14 @@ class HomeScreen extends StatelessWidget {
         ...recommendationService
             .getUserVideos()
             .map(
-              (userVideo) => UserVideoCard(userVideo: userVideo),
+              (userVideo) => UserVideoCard(
+                userVideo: userVideo,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => WatchScreen(userVideo: userVideo),
+                  ),
+                ),
+              ),
             )
             .fold<List<Widget>>(
           [],

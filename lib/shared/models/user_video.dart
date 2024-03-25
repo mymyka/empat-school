@@ -1,6 +1,7 @@
 import 'package:empat/shared/models/user_chanel.dart';
 
 class UserVideo {
+  final int index;
   final String widePreviewImage;
   final String title;
   final String timeDuration;
@@ -9,6 +10,7 @@ class UserVideo {
   final DateTime publishedAt;
 
   const UserVideo({
+    required this.index,
     required this.widePreviewImage,
     required this.title,
     required this.timeDuration,
