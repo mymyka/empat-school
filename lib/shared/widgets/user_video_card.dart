@@ -29,7 +29,7 @@ class UserVideoCard extends StatelessWidget {
                   ),
                   child: Text(
                     userVideo.timeDuration,
-                    style: TextStyle(fontSize: 12, color: Colors.white),
+                    style: const TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ),
               ),
@@ -41,7 +41,7 @@ class UserVideoCard extends StatelessWidget {
             ),
             title: Text(
               userVideo.title,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
             ),
@@ -50,7 +50,7 @@ class UserVideoCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
             ),
-            trailing: Icon(Icons.more_vert),
+            trailing: const Icon(Icons.more_vert),
           ),
         ],
       ),
