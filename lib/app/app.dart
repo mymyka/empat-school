@@ -59,7 +59,7 @@ class _AppState extends State<App> with SingleTickerProviderStateMixin {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: const Navbar(),
-        drawer: CustomDrawer(),
+        drawer: const CustomDrawer(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           backgroundColor: Colors.white,
